@@ -25,6 +25,7 @@ pipeline {
        script{
          dir ('terraform/eks-cluster-ec2') {
            sh 'terraform init'
+           sh 'terraform init -reconfigure'
            sh 'terraform fmt'
            sh 'terraform validate'
            sh 'terraform plan -out=tfplan'
