@@ -3,12 +3,12 @@
 terraform {
   backend "s3" {
     # Replace this with your bucket name!
-    bucket         = "prosperous-bucket-2024"
+    bucket         = "microservices-cicdpipeline-bucket"
     key            = "jjtech/terraform.tfstate"
     region         = "us-east-1"
 
     # Replace this with your DynamoDB table name!
-    dynamodb_table = "prosperous-db"
+    dynamodb_table = "microservices-cicdpipeline-table"
   }
   
 required_providers {
